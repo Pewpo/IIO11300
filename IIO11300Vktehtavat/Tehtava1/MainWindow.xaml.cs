@@ -51,18 +51,10 @@ namespace Tehtava1
 
     private void btnClose_Click(object sender, RoutedEventArgs e)
     {
+            //Käynnissä oleva sovellus suljetaan tällä tavalla
       Application.Current.Shutdown();
     }
   }
 
-  public class BusinessLogicWindow
-    {
-    /// <summary>
-    /// CalculatePerimeter calculates the perimeter of a window
-    /// </summary>
-    public static double CalculatePerimeter(double widht, double height)
-        {
-            throw new System.NotImplementedException();
-        }
-    }
+
 }
