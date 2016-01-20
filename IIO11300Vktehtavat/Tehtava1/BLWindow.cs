@@ -13,7 +13,20 @@ namespace Tehtava1
         /// </summary>
         public static double CalculatePerimeter(double widht, double height)
         {
-            throw new System.NotImplementedException();
+         double area =   widht* height;
+            return area;
+        }
+        public static double CalculatePiiri(double widht, double height)
+        {
+            double piiri = widht + height * 2;
+            return piiri;
+        }
+        public static double CalculateK_pa(double widht, double height, double Kleveys)
+        {
+            
+            double piiri = (widht + Kleveys * 2) * (height + Kleveys * 2);
+            piiri = piiri - (widht * height);
+            return piiri;
         }
     }
 }

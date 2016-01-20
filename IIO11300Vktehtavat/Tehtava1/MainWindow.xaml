@@ -5,22 +5,35 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Tehtava1"
         mc:Ignorable="d"
-        Title="Oy K-S Windows Ab" Height="350" Width="1138.235" FontSize="18">
+        Title="Oy K-S Windows Ab" Height="560.784" Width="1138.235" FontSize="18">
     <Grid>
         <StackPanel Orientation="Horizontal">
             <StackPanel Orientation="Vertical" Width="194" Margin="0,0,0,10">
                 <TextBlock x:Name="tbWidht" Height="28" Margin="10,10,10,0" ><Run Text="Ikkunan leveys"/><Run Text=" :"/></TextBlock>
-                <TextBox x:Name="txtWidht" Text="700" Height="28" Margin="10,10,10,0" />
+                <TextBox x:Name="txtikkunaleveys" Text="700" Height="28" Margin="10,10,10,0" />
                 <TextBlock x:Name="textBlock" TextWrapping="Wrap" Margin="10,10,10,0"><Run Text="Ikkunan korkeus"/><Run Text=" :"/></TextBlock>
-                <TextBox x:Name="textBox" Height="28" TextWrapping="Wrap" Text="100" Margin="10,10,10,0"/>
+                <TextBox x:Name="txtWindowHeight" Height="28" TextWrapping="Wrap" Text="100" Margin="10,10,10,0"/>
                 <TextBlock x:Name="textBlock1" TextWrapping="Wrap" Text="Karmipuun leveys : " Margin="10,10,10,0"/>
-                <TextBox x:Name="textBox1" Height="28" TextWrapping="Wrap" Text="45" Margin="10,10,10,0"/>
+                <TextBox x:Name="txtkarminleveys" Height="28" TextWrapping="Wrap" Text="45" Margin="10,10,10,0"/>
 
 
 
             </StackPanel>
             <StackPanel Orientation="Vertical" Width="624">
-                <Rectangle x:Name="myRectangle" Fill="LightBlue" StrokeThickness="7" Width="400" Height="250" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="110,50,111,50" Stroke="Brown" RenderTransformOrigin="0.511,0.002" />
+                <Rectangle x:Name="myRectangle" Fill="LightBlue" StrokeThickness="7" Width="400" Height="250" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="112,50" Stroke="Brown" RenderTransformOrigin="0.511,0.002" />
+                <StackPanel Height="40" Margin="0,0,0,0">
+                    <Label x:Name="label" Content="Ikkunan pinta-ala:" Margin="0,0,455,0"/>
+                    <TextBlock x:Name="ikkunaP" TextWrapping="Wrap" Text="Tulos1" Margin="300,-30,0,0"/>
+                    
+                </StackPanel>
+                <StackPanel Height="40" Margin="0,0,10,0">
+                    <Label x:Name="label2" Content="karmin piiri:" Margin="0,0,419,0"/>
+                    <TextBlock x:Name="karmiPiiri" TextWrapping="Wrap" Text="Tulos2" Margin="300,-30,0,0"/>
+                </StackPanel>
+                <StackPanel Height="40" Margin="0,0,10,0">
+                    <Label x:Name="label3" Content="Karmin pinta-ala:" Margin="0,0,419,0"/>
+                    <TextBlock x:Name="karmiPa" TextWrapping="Wrap" Text="Tulos3" Margin="300,-30,0,0"/>
+                </StackPanel>
             </StackPanel>
             <StackPanel Orientation="Vertical" Width="240" Margin="0,0,0,219">
                 <Button x:Name="btnCalculate" Content="Laske pinta-ala ja piiri" Height="32" Width="180" Click="btnCalculate_Click" Margin="10,10,10,0" Background="#FF00AEFF"/>

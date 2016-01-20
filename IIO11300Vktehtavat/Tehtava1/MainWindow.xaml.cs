@@ -25,7 +25,9 @@ namespace Tehtava1
   /// Interaction logic for MainWindow.xaml
   /// </summary>
   public partial class MainWindow : Window
-  {
+  {     
+       
+
     public MainWindow()
     {
       InitializeComponent();
@@ -33,11 +35,24 @@ namespace Tehtava1
 
         private void btnCalculate_Click(object sender, RoutedEventArgs e)
         {
+            double ikkunaleveys = double.Parse(txtikkunaleveys.Text);
+            double ikkunakorkeus = double.Parse(txtWindowHeight.Text);
+            double karminpaksuus = double.Parse(txtkarminleveys.Text);
             //TODO
             try
             {
                 double result;
-                result = BusinessLogicWindow.CalculatePerimeter(1, 1);
+                result = BusinessLogicWindow.CalculatePerimeter(ikkunaleveys, ikkunakorkeus);
+                ikkunaP.Text = result.ToString("0.##") + " m^2";
+
+                double Karminpiiri;
+                Karminpiiri = BusinessLogicWindow.CalculatePiiri(ikkunaleveys, ikkunakorkeus);
+                karmiPiiri.Text = Karminpiiri.ToString("0.##") + "m";
+
+                double KarminPA;
+                KarminPA = BusinessLogicWindow.CalculateK_pa(ikkunaleveys, ikkunakorkeus, karminpaksuus);
+                karmiPa.Text = KarminPA.ToString("0.##") + "m^2";
+
             }
             catch (Exception ex)
             {
