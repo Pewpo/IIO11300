@@ -54,7 +54,12 @@ namespace Tehtava1
             //Käynnissä oleva sovellus suljetaan tällä tavalla
       Application.Current.Shutdown();
     }
-  }
+
+        private void textBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+    }
 
 
 }
