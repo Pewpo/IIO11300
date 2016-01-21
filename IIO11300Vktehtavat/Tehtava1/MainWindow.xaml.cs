@@ -74,6 +74,18 @@ namespace Tehtava1
         {
 
         }
+        private void btnCalculate00(object sender, RoutedEventArgs e) {
+
+            Ikkuna ikk = new Ikkuna();
+            ikk.Leveys = double.Parse(txtikkunaleveys.Text);
+            ikk.Korkeus = double.Parse(txtWindowHeight.Text);
+            //V.01 Pinta-alan lakseminen kutsumalla metodia
+      //      txtWindowArea.Text =  ikk.LaskePintaAla().ToString();
+            //v.02 pinta-ala on olion ominaisuus
+            txtWindowArea.Text = ikk.PintaAla.ToString();
+
+
+        }
     }
 
 

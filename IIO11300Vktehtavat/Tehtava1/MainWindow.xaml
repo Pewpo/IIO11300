@@ -34,10 +34,15 @@
                     <Label x:Name="label3" Content="Karmin pinta-ala:" Margin="0,0,419,0"/>
                     <TextBlock x:Name="karmiPa" TextWrapping="Wrap" Text="Tulos3" Margin="300,-30,0,0"/>
                 </StackPanel>
+                <StackPanel Height="40" Margin="0,0,10,0">
+                    <Label x:Name="label4" Content="Pinta-ala OK:" Margin="0,0,419,0"/>
+                    <TextBlock x:Name="txtWindowArea" TextWrapping="Wrap" Text="Tulos3" Margin="300,-30,0,0"/>
+                </StackPanel>
             </StackPanel>
             <StackPanel Orientation="Vertical" Width="240" Margin="0,0,0,219">
                 <Button x:Name="btnCalculate" Content="Laske pinta-ala ja piiri" Height="32" Width="180" Click="btnCalculate_Click" Margin="10,10,10,0" Background="#FF00AEFF"/>
                 <Button x:Name="btnClose" Content="Sulje" Height="32" Width="180" Click="btnClose_Click" Margin="10,10,10,0"/>
+                <Button x:Name="btnIJ" Content="Laske pinta-ala OK" Height="32" Width="180" Click="btnCalculate00" Margin="10,10,10,0"/>
             </StackPanel>
 
         </StackPanel>
