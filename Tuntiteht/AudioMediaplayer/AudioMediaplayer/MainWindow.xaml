@@ -1,0 +1,27 @@
+﻿<Window x:Class="AudioMediaplayer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AudioMediaplayer"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <StackPanel Orientation="Horizontal">
+                <TextBox x:Name="txtFileName" Width="200"/>
+                <Button x:Name="btnBrowse" Content="Browse" Margin="10,0,0,0" Click="btnBrowse_Click"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Button x:Name="btnPlay" Content="Play" HorizontalAlignment="left" VerticalAlignment="Top" Height="28" Width="63" Margin="10,0,0,0" Click="btnPlay_Click"/>
+                <Button x:Name="btnpause" Content="Pause" HorizontalAlignment="left"  VerticalAlignment="Top" Height="28" Width="63" Margin="10,0,0,0" Click="btnpause_Click" IsEnabled="False"/>
+                <Button x:Name="btnStop" Content="Stop" HorizontalAlignment="left" VerticalAlignment="Top" Height="28" Width="63" Margin="10,0,0,0" Click="btnStop_Click" IsEnabled="False"/>
+                <Button x:Name="btnClose" Content="Close" HorizontalAlignment="left" VerticalAlignment="Top" Height="28" Width="63" Margin="10,0,0,0" Click="btnClose_Click"/>
+            </StackPanel>
+            <StackPanel>
+                <MediaElement x:Name="mediaElement" Width="500" Height="252" Margin="8,0,9,0" LoadedBehavior="Manual"/>
+            </StackPanel>
+          
+        </StackPanel>
+    </Grid>
+</Window>
