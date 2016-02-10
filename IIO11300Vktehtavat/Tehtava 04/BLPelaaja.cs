@@ -10,18 +10,18 @@ namespace Tehtava_04
     {
         private  string etunimi;
         private string sukunimi;
-        private readonly string kokonimi;
-        private readonly string esitysnimi;
         private string seura;
         private double siirtohinta;
+        private  readonly string kokonimi;
+        private  string esitysnimi;
         //konstruktorit
-      public  BLPelaaja(string enimi, string snimi, double shinta, string seura)
+        public  BLPelaaja(string enimi, string snimi, double shinta, string seura)
         {
             this.etunimi = enimi;
             this.sukunimi = snimi;
             this.kokonimi = enimi +" "+snimi;
-            this.esitysnimi = enimi + " " + snimi + "," + seura;
             this.seura = seura;
+            this.esitysnimi = this.etunimi + " " + this.sukunimi + "," + this.seura;
             this.siirtohinta = shinta;
         }
         public BLPelaaja() {
@@ -40,11 +40,34 @@ namespace Tehtava_04
             this.seura = null;
             this.siirtohinta = 0;
         }
-    public  string  GetPelaajatiedot()
+        public string getEnimi()
         {
-            return this.esitysnimi + "<br>";
+            return this.etunimi;
         }
-
+        public string getSnimi()
+        {
+            return this.sukunimi;
+        }
+        public string getSeura()
+        {
+            return this.seura;
+        }
+        public double getSiirtohinta()
+        {
+            return this.siirtohinta;
+        }
+        public void setTiedot(string enimi, string snimi, double siirtohinta, string seura)
+        {
+            this.etunimi = enimi;
+            this.sukunimi = snimi;
+            this.siirtohinta = siirtohinta;
+            this.seura = seura; 
+            this.esitysnimi = this.etunimi + " " + this.sukunimi + "," + this.seura;
+        }
+        public override string ToString()
+        {
+            return this.esitysnimi;
+        }
 
     }
 }

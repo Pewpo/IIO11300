@@ -16,26 +16,30 @@
             <StackPanel Orientation="Horizontal" Margin="0,5,228,0"  >
                 <Label Width="66">Sukunimi</Label>
                 <TextBox x:Name="txtboxSnimi" Width="98"></TextBox>
-                <Button x:Name="btnTalleta" Content="Talleta pelaaja" Width="113"/>
+                <Button x:Name="btnTalleta" Content="Talleta pelaaja" Width="113" Click="btnTalleta_Click"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="0,5,228,0"  >
                 <Label Width="66">Siirtohinta</Label>
                 <TextBox x:Name="txtboxHinta" Width="98"></TextBox>
-                <Button x:Name="btnPoista" Content="Poista pelaaja" Width="113"/>
+                <Button x:Name="btnPoista" Content="Poista pelaaja" Width="113" Click="btnPoista_Click"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="0,5,228,0" >
                 <Label Width="66">Siirtohinta</Label>
-                <ComboBox x:Name="cboxSeura"  Width="98"/>
-                <Button x:Name="btnKirjoita" Content="Kirjoita pelaaja" Width="113"/>
+                <ComboBox x:Name="cboxSeura"  Width="98" />
+                <Button x:Name="btnKirjoita" Content="Kirjoita pelaaja" Width="113" Click="btnKirjoita_Click"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="167,5,228,0" >
-                <Button x:Name="btnLopeta" Content="Lopeta" Width="108"/>
+                <Button x:Name="btnLopeta" Content="Lopeta" Width="108" Click="btnLopeta_Click"/>
             </StackPanel>
-            <StatusBar x:Name="sbarText" Margin="0,140,0,0" Height="29" />
+            <StatusBar Margin="0,140,0,0" Height="29" >
+                <StatusBarItem Height="25" FontSize="10">
+                    <TextBlock Name="tbStatus"/>
+                </StatusBarItem>
+            </StatusBar>
 
         </StackPanel>
         <StackPanel Height="320" VerticalAlignment="Top">
-        <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="166" Margin="290,10,0,0" VerticalAlignment="Top" Width="227"/>
+        <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="166" Margin="290,10,0,0" VerticalAlignment="Top" Width="227" SelectionChanged="listBox_SelectionChanged"/>
         </StackPanel>
      
 
