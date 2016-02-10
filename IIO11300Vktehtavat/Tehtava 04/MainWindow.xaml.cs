@@ -144,7 +144,7 @@ namespace Tehtava_04
                     int apu = listBox.Items.Count;
                     for (int i = 0; i < apu; i++)
                     {
-                        sw.WriteLine("pelaaja " + i + ": " + pelaajat[i].ToString());
+                        sw.WriteLine("pelaaja " + i + ": " + pelaajat[i].ToString() + ", Hinta :" + pelaajat[i].getSiirtohinta() + "€");
                     }
                 }
                 tbStatus.Text = "Tiedostoon tallentaminen onnistui";
