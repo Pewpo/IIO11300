@@ -11,7 +11,7 @@
             <StackPanel Orientation="Horizontal" Margin="0,5,228,0"  >
                 <Label Width="66">Etunimi</Label>
                 <TextBox x:Name="txtboxEnimi" Width="98"></TextBox>
-                <Button x:Name="btnUusi" Content="Luo uusipelaaja" Width="113"/>
+                <Button x:Name="btnUusi" Content="Luo uusipelaaja" Width="113" Click="btnUusi_Click"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="0,5,228,0"  >
                 <Label Width="66">Sukunimi</Label>
