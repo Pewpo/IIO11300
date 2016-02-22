@@ -31,6 +31,7 @@ namespace H5Movies
 
             //localpath palauttaa käyttöjärjestelmä muodossa hakemiston nimen
             string filu = xdpMovies.Source.LocalPath;
+            MessageBox.Show(filu);
             //tallennnetaan raakasti XmlDocument olemassaolevan XML-tiedoston päälle!!!
             xdpMovies.Document.Save(filu);
         }

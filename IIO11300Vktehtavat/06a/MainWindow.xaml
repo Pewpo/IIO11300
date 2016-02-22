@@ -1,0 +1,36 @@
+﻿<Window x:Class="_06a.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_06a"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <StackPanel.Background>
+                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FFD30B0B" Offset="0.957"/>
+                    <GradientStop Color="#FF590707" Offset="0.087"/>
+                </LinearGradientBrush>
+            </StackPanel.Background>
+            <StackPanel Orientation="Horizontal" Margin="10">
+                <Button x:Name="btnHaeViinit" Height="38" Width="124" Content="Hae viinit"  FontSize="16" Click="btnHaeViinit_Click" />
+                <ComboBox x:Name="comboBox" Width="120" Margin="20,0,0,0"/>
+            </StackPanel>
+            <DataGrid Margin="10" Height="189">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Maistelu viini"/>
+                    <DataGridTextColumn Header="Pojoja" />
+                    <DataGridTextColumn Header="Valmistettu"/>
+                </DataGrid.Columns>
+            </DataGrid>
+            <StatusBar  Margin="10,10,371,10">
+                <StatusBarItem Height="25" FontSize="10" Background="#FFCB0B0B">
+                    <TextBlock Name="tbStatus"/>
+                </StatusBarItem>
+            </StatusBar>
+        </StackPanel>
+    </Grid>
+</Window>
