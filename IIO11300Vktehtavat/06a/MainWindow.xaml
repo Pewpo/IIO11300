@@ -19,11 +19,11 @@
                 <Button x:Name="btnHaeViinit" Height="38" Width="124" Content="Hae viinit"  FontSize="16" Click="btnHaeViinit_Click" />
                 <ComboBox x:Name="comboBox" Width="120" Margin="20,0,0,0"/>
             </StackPanel>
-            <DataGrid Margin="10" Height="189">
+            <DataGrid Margin="10" Height="189" x:Name="dgNayta">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="Maistelu viini"/>
-                    <DataGridTextColumn Header="Pojoja" />
-                    <DataGridTextColumn Header="Valmistettu"/>
+                    <DataGridTextColumn  Header="Maistelu viini"  Binding="{Binding XPath=nimi}"/>
+                    <DataGridTextColumn  Header="Pojoja"  Binding="{Binding XPath=arvio}"/>
+                    <DataGridTextColumn  Header="Valmistettu" Binding="{Binding XPath=maa}"/>
                 </DataGrid.Columns>
             </DataGrid>
             <StatusBar  Margin="10,10,371,10">
