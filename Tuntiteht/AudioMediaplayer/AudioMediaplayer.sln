@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "H4TyontekijatWPF", "H4Tyont
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "H5Movies", "H5Movies\H5Movies.csproj", "{7B0260F7-847A-4D97-8464-5FE7D8412EE5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "H6DataBinding", "H6DataBinding\H6DataBinding.csproj", "{422420D2-3096-45DB-9F3E-89E6EF2DB423}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{7B0260F7-847A-4D97-8464-5FE7D8412EE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7B0260F7-847A-4D97-8464-5FE7D8412EE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7B0260F7-847A-4D97-8464-5FE7D8412EE5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{422420D2-3096-45DB-9F3E-89E6EF2DB423}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{422420D2-3096-45DB-9F3E-89E6EF2DB423}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{422420D2-3096-45DB-9F3E-89E6EF2DB423}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{422420D2-3096-45DB-9F3E-89E6EF2DB423}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
