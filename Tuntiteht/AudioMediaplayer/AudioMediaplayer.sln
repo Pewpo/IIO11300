@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "H6DataBinding", "H6DataBind
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "H07ADONETConsole", "H07ADONETConsole\H07ADONETConsole.csproj", "{8363B536-885A-41E0-9093-8AADED361594}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "H08ADONETlasnaolot", "H08ADONETlasnaolot\H08ADONETlasnaolot.csproj", "{15F25D29-88B4-4B09-8B3B-DFCF90856175}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{8363B536-885A-41E0-9093-8AADED361594}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8363B536-885A-41E0-9093-8AADED361594}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8363B536-885A-41E0-9093-8AADED361594}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15F25D29-88B4-4B09-8B3B-DFCF90856175}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15F25D29-88B4-4B09-8B3B-DFCF90856175}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15F25D29-88B4-4B09-8B3B-DFCF90856175}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15F25D29-88B4-4B09-8B3B-DFCF90856175}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
