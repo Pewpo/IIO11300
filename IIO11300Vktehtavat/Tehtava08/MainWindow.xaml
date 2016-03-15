@@ -1,0 +1,26 @@
+﻿<Window x:Class="Tehtava08.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Tehtava08"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525" FontSize="15">
+    <Grid>
+        <StackPanel Orientation="Horizontal">
+            <StackPanel>
+                <ListBox x:Name="lboxAsiakkaat" DisplayMemberPath = "lastname" ItemsSource="{Binding}" Height="320" ScrollViewer.VerticalScrollBarVisibility="Visible" />
+            </StackPanel>
+            <StackPanel Width="200">
+                <TextBlock TextAlignment="Center">Nimi:</TextBlock>
+                <TextBox Background="LightBlue" FontWeight="Bold" Text="{Binding ElementName=lboxAsiakkaat, Path=SelectedItem.firstname, Mode=OneWay}"/>
+                <TextBlock TextAlignment="Center">Sukunimi:</TextBlock>
+                <TextBox  Background="LightBlue" FontWeight="Bold"  Text="{Binding ElementName=lboxAsiakkaat, Path=SelectedItem.lastname, Mode=OneWay}"/>
+                <TextBlock  TextAlignment="Center">Osoite:</TextBlock>
+                <TextBox  Background="LightBlue" FontWeight="Bold" Text="{Binding ElementName=lboxAsiakkaat, Path=SelectedItem.address, Mode=OneWay}"/>
+                <TextBlock TextAlignment="Center">Kaupunki:</TextBlock>
+                <TextBox  Background="LightBlue" FontWeight="Bold" Text="{Binding ElementName=lboxAsiakkaat, Path=SelectedItem.city, Mode=OneWay}"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
