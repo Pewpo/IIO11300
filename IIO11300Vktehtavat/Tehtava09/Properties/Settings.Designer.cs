@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace JAMK.ICT.Properties {
+namespace Tehtava09.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
@@ -26,8 +26,7 @@ namespace JAMK.ICT.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=eight.labranet.jamk.fi;Initial Catalog=Viini;Persist Security Info=Tr" +
-            "ue;User ID=koodari;Password=koodari13")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Server=eight.labranet.jamk.fi;Database=Viini;User=koodari;Password=koodari13")]
         public string Tietokanta {
             get {
                 return ((string)(this["Tietokanta"]));
@@ -36,7 +35,7 @@ namespace JAMK.ICT.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("vCustomers")]
+        [global::System.Configuration.DefaultSettingValueAttribute("customer")]
         public string Taulu {
             get {
                 return ((string)(this["Taulu"]));

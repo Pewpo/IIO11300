@@ -10,7 +10,7 @@
       <Value Profile="(Default)">Data Source=eight.labranet.jamk.fi;Initial Catalog=Viini;Persist Security Info=True;User ID=koodari;Password=koodari13</Value>
     </Setting>
     <Setting Name="Taulu" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">customer</Value>
+      <Value Profile="(Default)">vCustomers</Value>
     </Setting>
   </Settings>
 </SettingsFile>
