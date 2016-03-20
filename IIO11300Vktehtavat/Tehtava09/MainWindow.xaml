@@ -25,7 +25,7 @@
             </StackPanel>
             <Button x:Name="bthPoistaValittu" Height="29" Content="Poista valittu" Click="bthPoistaValittu_Click" />
             <Button x:Name="bthTallenna" Height="29" Content="Tallenna muutokset" />
-            <DataGrid x:Name="dgAsiakkaat" Margin="10" Height="185"  AutoGenerateColumns="True" ItemsSource="{Binding}" SelectionChanged="dgAsiakkaat_SelectionChanged">
+            <DataGrid x:Name="dgAsiakkaat" Margin="10" Height="185"  AutoGenerateColumns="True" ItemsSource="{Binding}" SelectionMode="Single">
                 
             </DataGrid>
 

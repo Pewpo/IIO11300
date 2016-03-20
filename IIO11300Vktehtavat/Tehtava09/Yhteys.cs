@@ -47,12 +47,28 @@ namespace Tehtava09
             catch (Exception ex)
             {
 
-                throw ex;
+                 MessageBox.Show(ex.Message);
             }
         }
-        public static void  DeleteHenkilo()
+        public static void  DeleteHenkilo(string constr, string lastname)
         {
-            
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(constr))
+                {
+
+                    conn.Open();
+                    string sql = string.Format("DELETE FROM customer WHERE lastname='{0}'", lastname);
+                    SqlCommand command = new SqlCommand(sql, conn);
+                    command.ExecuteReader();
+                    conn.Close();
+                    MessageBox.Show("Henkilön poisto " + lastname + " onnistui");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Henkilön poisto epäonnistui"); 
+            }
         }
     }
 }

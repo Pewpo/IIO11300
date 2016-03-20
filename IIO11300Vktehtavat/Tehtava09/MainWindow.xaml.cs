@@ -59,20 +59,36 @@ namespace Tehtava09
 
         private void btnLuo_Click(object sender, RoutedEventArgs e)
         {
-            Yhteys.CreateNew(ConnStr, tbEnimi.Text, tbSnimi.Text, tbOsoite.Text, tbPnumero.Text, tbKaupunki.Text);
+            if (ConnStr != "" && tbEnimi.Text != "" && tbSnimi.Text != "" && tbOsoite.Text != "" && tbPnumero.Text != "" && tbKaupunki.Text != "" )
+            {
+                Yhteys.CreateNew(ConnStr, tbEnimi.Text, tbSnimi.Text, tbOsoite.Text, tbPnumero.Text, tbKaupunki.Text);
+            }
+            else
+            {
+                MessageBox.Show("Täytä ensin kaikki kentät kunnolla");
+            }
         }
 
         private void bthPoistaValittu_Click(object sender, RoutedEventArgs e)
         {
-            
+            try
+            {
 
-         
-            //MessageBox.Show("Haluatko poistaa henkilön" + dgAsiakkaat);
+                DataRowView drv = (DataRowView)dgAsiakkaat.SelectedItem;
+                string lastname = drv["lastname"].ToString();
+                MessageBoxResult msgbox = MessageBox.Show("Haluatko poistaa henkilön " + lastname, "Poista henkilö", MessageBoxButton.YesNo);
+                if (msgbox == MessageBoxResult.Yes)
+                {
+                    Yhteys.DeleteHenkilo(ConnStr, lastname);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("valitse ensin poistettava henkilö");
+            }
+
         }
 
-        private void dgAsiakkaat_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-           
-        }
+
     }
 }
