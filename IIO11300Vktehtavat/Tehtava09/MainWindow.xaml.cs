@@ -35,19 +35,16 @@ namespace Tehtava09
         {
             try
             {
-              
-
+                ConnStr = Tehtava09.Properties.Settings.Default.Tietokanta;
+                TableName = Tehtava09.Properties.Settings.Default.Taulu;
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show(ex.Message);
             }
         }
         private void bthHaeAsiakkaat_Click(object sender, RoutedEventArgs e)
-        {
-            ConnStr = Tehtava09.Properties.Settings.Default.Tietokanta;
-            TableName = Tehtava09.Properties.Settings.Default.Taulu;
+        {         
             dt = Yhteys.GetAllCustomersFromSQLServer(ConnStr, TableName, "");
             dgAsiakkaat.ItemsSource = dt.DefaultView;
         }
