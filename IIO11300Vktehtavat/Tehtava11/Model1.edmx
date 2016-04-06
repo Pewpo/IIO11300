@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="SMLiigaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Pelaajat">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="etunimi" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="sukunimi" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="seura" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="arvo" Type="float" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PelaajaTiedotKaikki">
+          <Key>
+            <PropertyRef Name="PID" />
+          </Key>
+          <Property Name="PID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nimi" Type="nvarchar" MaxLength="255" />
+          <Property Name="Joukkue" Type="nvarchar" MaxLength="255" />
+          <Property Name="Nr" Type="float" />
+          <Property Name="PP" Type="nvarchar" MaxLength="255" />
+          <Property Name="O" Type="int" />
+          <Property Name="Maalit" Type="int" />
+          <Property Name="Syötöt" Type="int" />
+          <Property Name="Pisteet" Type="int" />
+          <Property Name="R" Type="int" />
+          <Property Name="PlusMinus" Type="int" />
+          <Property Name="YV" Type="int" />
+          <Property Name="AV" Type="int" />
+          <Property Name="VM" Type="int" />
+          <Property Name="L" Type="int" />
+          <Property Name="L%" Type="int" />
+          <Property Name="Aika" Type="float" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'SMLiiga.dbo.Pisteet' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Pisteet">
+          <Property Name="sukunimi" Type="nvarchar" MaxLength="255" />
+          <Property Name="etunimi" Type="nvarchar" MaxLength="255" />
+          <Property Name="seura" Type="nvarchar" MaxLength="255" />
+          <Property Name="nro" Type="smallint" />
+          <Property Name="pelipaikka" Type="nvarchar" MaxLength="255" />
+          <Property Name="ottelut" Type="smallint" />
+          <Property Name="maalit" Type="smallint" />
+          <Property Name="syötöt" Type="smallint" />
+          <Property Name="plus" Type="smallint" />
+          <Property Name="miinus" Type="smallint" />
+        </EntityType>-->
+        <EntityContainer Name="SMLiigaModelStoreContainer">
+          <EntitySet Name="Pelaajat" EntityType="Self.Pelaajat" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PelaajaTiedotKaikki" EntityType="Self.PelaajaTiedotKaikki" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SMLiigaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Pelaajat">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="etunimi" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="sukunimi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="seura" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="arvo" Type="Double" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PelaajaTiedotKaikki">
+          <Key>
+            <PropertyRef Name="PID" />
+          </Key>
+          <Property Name="PID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nimi" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Joukkue" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Nr" Type="Double" />
+          <Property Name="PP" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="O" Type="Int32" />
+          <Property Name="Maalit" Type="Int32" />
+          <Property Name="Syötöt" Type="Int32" />
+          <Property Name="Pisteet" Type="Int32" />
+          <Property Name="R" Type="Int32" />
+          <Property Name="PlusMinus" Type="Int32" />
+          <Property Name="YV" Type="Int32" />
+          <Property Name="AV" Type="Int32" />
+          <Property Name="VM" Type="Int32" />
+          <Property Name="L" Type="Int32" />
+          <Property Name="L_" Type="Int32" />
+          <Property Name="Aika" Type="Double" />
+        </EntityType>
+        <EntityContainer Name="SMLiigaEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Pelaajats" EntityType="Self.Pelaajat" />
+          <EntitySet Name="PelaajaTiedotKaikkis" EntityType="Self.PelaajaTiedotKaikki" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="SMLiigaModelStoreContainer" CdmEntityContainer="SMLiigaEntities">
+          <EntitySetMapping Name="Pelaajats">
+            <EntityTypeMapping TypeName="SMLiigaModel.Pelaajat">
+              <MappingFragment StoreEntitySet="Pelaajat">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="etunimi" ColumnName="etunimi" />
+                <ScalarProperty Name="sukunimi" ColumnName="sukunimi" />
+                <ScalarProperty Name="seura" ColumnName="seura" />
+                <ScalarProperty Name="arvo" ColumnName="arvo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PelaajaTiedotKaikkis">
+            <EntityTypeMapping TypeName="SMLiigaModel.PelaajaTiedotKaikki">
+              <MappingFragment StoreEntitySet="PelaajaTiedotKaikki">
+                <ScalarProperty Name="PID" ColumnName="PID" />
+                <ScalarProperty Name="Nimi" ColumnName="Nimi" />
+                <ScalarProperty Name="Joukkue" ColumnName="Joukkue" />
+                <ScalarProperty Name="Nr" ColumnName="Nr" />
+                <ScalarProperty Name="PP" ColumnName="PP" />
+                <ScalarProperty Name="O" ColumnName="O" />
+                <ScalarProperty Name="Maalit" ColumnName="Maalit" />
+                <ScalarProperty Name="Syötöt" ColumnName="Syötöt" />
+                <ScalarProperty Name="Pisteet" ColumnName="Pisteet" />
+                <ScalarProperty Name="R" ColumnName="R" />
+                <ScalarProperty Name="PlusMinus" ColumnName="PlusMinus" />
+                <ScalarProperty Name="YV" ColumnName="YV" />
+                <ScalarProperty Name="AV" ColumnName="AV" />
+                <ScalarProperty Name="VM" ColumnName="VM" />
+                <ScalarProperty Name="L" ColumnName="L" />
+                <ScalarProperty Name="L_" ColumnName="L%" />
+                <ScalarProperty Name="Aika" ColumnName="Aika" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

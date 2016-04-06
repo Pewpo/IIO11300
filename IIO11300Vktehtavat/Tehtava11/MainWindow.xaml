@@ -1,0 +1,51 @@
+﻿<Window x:Class="Tehtava11.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Tehtava11"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <StackPanel Orientation="Vertical" Name="spPelaajat">
+
+            <StackPanel Orientation="Horizontal" Margin="0,5,228,0" x:Name="sp1" >
+                <Label Width="66" >Etunimi</Label>
+                <TextBox x:Name="txtboxEnimi" Width="98"  Text="{Binding Path=etunimi}" ></TextBox>
+                <Button x:Name="btnUusi" Content="Luo uusipelaaja" Width="113" Click="btnUusi_Click" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,5,228,0" x:Name="sp2" >
+                <Label Width="66">Sukunimi</Label>
+                <TextBox x:Name="txtboxSnimi" Width="98"  Text="{Binding Path=sukunimi,  UpdateSourceTrigger=PropertyChanged}"  ></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,5,228,0"  x:Name="sp3">
+                <Label Width="66">Siirtohinta</Label>
+                <TextBox x:Name="txtboxHinta" Width="98" Text="{Binding Path=arvo,  UpdateSourceTrigger=PropertyChanged}" ></TextBox>
+                <Button x:Name="btnPoista" Content="Poista pelaaja" Width="113" Click="btnPoista_Click" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,5,228,0"  x:Name="sp4">
+                <Label Width="66">seura</Label>
+                <TextBox x:Name="cboxSeura"  Width="98" Text="{Binding Path=seura}"/>
+                <Button x:Name="btnTallennaKantaan" Content="Tallenna kantaan" Width="113" Click="btnTallennaKantaan_Click" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="167,5,228,0" >
+                <Button x:Name="btnHaekannasta" Content="Hae kannasta" Width="108" Click="btnHaekannasta_Click"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="167,5,228,0" >
+                <Button x:Name="btnLopeta" Content="Lopeta" Width="108" />
+            </StackPanel>
+            <StatusBar Margin="0,140,0,0" Height="29" >
+                <StatusBarItem Height="25" FontSize="10">
+                    <TextBlock Name="tbStatus"/>
+                </StatusBarItem>
+            </StatusBar>
+
+        </StackPanel>
+        <StackPanel Height="320" VerticalAlignment="Top">
+            <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="166" Margin="290,10,0,0" VerticalAlignment="Top" Width="227" ItemsSource="{Binding}" SelectionChanged="listBox_SelectionChanged" />
+        </StackPanel>
+
+
+
+    </Grid>
+</Window>
